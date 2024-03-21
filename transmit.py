@@ -22,7 +22,7 @@ def transmit():
     f2.write(random.choice(WORDS))
     wordList = encode(currentWord)#encode current word as a group of words
     for w in wordList:
-        print(w, flush=True, end='') #send word upstream to js?
+        print("word = " + w, flush=True, end='') #send word upstream to js?
         time.sleep(3)
     transmit()
 
