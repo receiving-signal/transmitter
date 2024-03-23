@@ -23,7 +23,9 @@ def transmit():
     wordList = encode(currentWord)#encode current word as a group of words
     for w in wordList:
         time.sleep(3)
-        print(w, flush=True, end='') #send word upstream to js?
+        f3 = open("crypt.txt", "w") #write to txt, for js import
+        f3.write(w)
+        f3.close()
     transmit()
 
 WORDS = open("list.txt").read().splitlines()
